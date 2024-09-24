@@ -28,7 +28,7 @@ function App() {
     const fetchTeacher = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/users/teacher/me",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/teacher/me",
           {
             withCredentials: true,
           }
@@ -47,7 +47,7 @@ function App() {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/users/teacher/logout",
+        "https://edumentor-backend-s85o.onrender.com/api/v1/users/teacher/logout",
         { withCredentials: true }
       );
       toast.success(response.data.message);
