@@ -120,7 +120,7 @@ const Appointment = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/appointment/post",
+        "https://edumentor-backend-s85o.onrender.com/api/v1/appointment/post",
         {
           firstName: user.firstName,
           lastName: user.lastName,
