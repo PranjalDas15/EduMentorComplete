@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/users/login",
+        "https://edumentor-backend-s85o.onrender.com/api/v1/users/login",
         { email, password, confirmPassword, role: "Teacher" },
         {
           withCredentials: true,
