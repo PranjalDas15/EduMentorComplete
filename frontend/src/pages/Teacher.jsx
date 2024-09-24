@@ -17,7 +17,7 @@ const Teachers = () => {
     const fetchTeacherDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/users/teachers/${teacherId}`
+          `https://edumentor-backend-s85o.onrender.com/api/v1/users/teachers/${teacherId}`
         );
         setTeacher(response.data.teacher);
         console.log(teacherId);
