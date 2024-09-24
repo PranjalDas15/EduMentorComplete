@@ -43,7 +43,7 @@ const Profile = () => {
   const handleDeleteAppointment = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/v1/appointment/delete/${id}`,
+        `https://edumentor-backend-s85o.onrender.com/api/v1/appointment/delete/${id}`,
         {
           withCredentials: true,
         }
