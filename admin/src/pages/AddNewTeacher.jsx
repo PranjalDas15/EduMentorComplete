@@ -59,7 +59,7 @@ const AddNewTeacher = () => {
       formData.append("teacherBranch", teacherBranch);
       formData.append("teacherAvatar", teacherAvatar);
       await axios
-        .post("http://localhost:5000/api/v1/users/teacher/addnew", formData, {
+        .post("https://edumentor-backend-s85o.onrender.com/api/v1/users/teacher/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
