@@ -87,7 +87,7 @@ const AddNewTeacher = () => {
   return (
     <div className="w-full">
       <h1 className="font-bold text-[50px] text-center text-blue-900 my-5">
-        Add Admin
+        Add Teacher
       </h1>
       <div className="flex flex-col items-center justify-center w-full px-10 my-10">
         <div className="bg-blue-900 rounded-xl mx-10 px-10 py-5 text-white  w-full">
@@ -145,7 +145,7 @@ const AddNewTeacher = () => {
                   placeholder="Password"
                 />
               </div>
-              <div className="py-2 w-full col-span-2">
+              <div className="py-2 w-full">
                 <p className="text-sm pb-2">Phone Number</p>
                 <input
                   className="w-full h-[35px] text-blue-900 rounded-md p-1"
