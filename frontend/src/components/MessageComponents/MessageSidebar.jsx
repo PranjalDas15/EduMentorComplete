@@ -14,7 +14,7 @@ const MessageSidebar = ({ setSelectedConversation, setIsHidden }) => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/message/userConversations/${user._id}`,
+          `https://edumentor-backend-s85o.onrender.com/api/v1/message/userConversations/${user._id}`,
           {
             withCredentials: true,
           }
@@ -36,7 +36,7 @@ const MessageSidebar = ({ setSelectedConversation, setIsHidden }) => {
       for (const convo of conversations) {
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/v1/message/user/${user._id}/${convo.participants.find(p => p !== user._id)}`,
+            `https://edumentor-backend-s85o.onrender.com/api/v1/message/user/${user._id}/${convo.participants.find(p => p !== user._id)}`,
             { withCredentials: true }
           );
           setMessages(prev => ({
