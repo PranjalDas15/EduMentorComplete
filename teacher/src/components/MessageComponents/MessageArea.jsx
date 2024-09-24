@@ -17,7 +17,7 @@ const MessageArea = ({ userId, setIsHidden, isHidden }) => {
     try {
       const senderId = teacher._id;
       const response = await axios.post(
-        `http://localhost:5000/api/v1/message/teacherSend/${userId}`,
+        `https://edumentor-backend-s85o.onrender.com/api/v1/message/teacherSend/${userId}`,
         { senderId, message },
         {
           withCredentials: true,
@@ -40,7 +40,7 @@ const MessageArea = ({ userId, setIsHidden, isHidden }) => {
       try {
         const teacherId = teacher._id;
         const response = await axios.get(
-          `http://localhost:5000/api/v1/message/teacher/${teacherId}/${userId}`,
+          `https://edumentor-backend-s85o.onrender.com/api/v1/message/teacher/${teacherId}/${userId}`,
           { withCredentials: true }
         );
         setConversation(response.data);
