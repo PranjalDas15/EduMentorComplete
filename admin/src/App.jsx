@@ -21,7 +21,7 @@ const App = () => {
     const fetchAdmin = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/users/admin/me",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/admin/me",
           {
             withCredentials: true,
           }
@@ -38,7 +38,7 @@ const App = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/v1/users/admin/logout", { withCredentials: true });
+      const response = await axios.get("https://edumentor-backend-s85o.onrender.com/api/v1/users/admin/logout", { withCredentials: true });
       toast.success(response.data.message);
       setIsAuthenticated(false);
       setAdmin({});
@@ -53,7 +53,7 @@ const App = () => {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/users/teachers");
+        const response = await axios.get("https://edumentor-backend-s85o.onrender.com/api/v1/users/teachers");
         setTeachers(response.data.teachers); 
       } catch (error) {
         console.error("Failed to fetch teachers");
