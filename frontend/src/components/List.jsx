@@ -7,7 +7,10 @@ const List = () => {
   const navigate = useNavigate();
 
   if (!teachers.length) {
-    return <div>No teachers available</div>;
+    return 
+      <div className="text-center">
+        <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
+      </div>;
   }
 
   return (
