@@ -25,7 +25,7 @@ const AddNewAdmin = () => {
     try {
       await axios
         .post(
-          "http://localhost:5000/api/v1/users/admin/addnew",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/admin/addnew",
           { firstName, lastName, email, phone, dob, gender, password },
           {
             withCredentials: true,
