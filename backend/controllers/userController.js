@@ -118,7 +118,9 @@ export const logoutAdmin = catchAsyncErrors(async (req, res, next) => {
 export const logoutTeacher = catchAsyncErrors(async (req, res, next) => {
     res.status(200).cookie("teachertoken", "", {
         httpOnly: true,
-        expires: new Date(Date.now())
+        expires: new Date(Date.now()),
+        sameSite: 'None', 
+        secure: true,
     }).json({
         success: true,
         message: "Teacher logged out successfully"
@@ -130,7 +132,9 @@ export const logoutTeacher = catchAsyncErrors(async (req, res, next) => {
 export const logoutUser = catchAsyncErrors(async (req, res, next) => {
     res.status(200).cookie("usertoken", "", {
         httpOnly: true,
-        expires: new Date(Date.now())
+        expires: new Date(Date.now()),
+        sameSite: 'None', 
+        secure: true,
     }).json({
         success: true,
         message: "User logged out successfully"
