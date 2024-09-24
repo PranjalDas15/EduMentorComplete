@@ -23,7 +23,7 @@ import { toast } from "react-toastify";
     try {
       console.log({ firstName, lastName, email, phone, dob, gender, password});
     
-      const response = await axios.post("http://localhost:5000/api/v1/users/register", 
+      const response = await axios.post("https://edumentor-backend-s85o.onrender.com/api/v1/users/register", 
         { firstName, lastName, email, phone, dob, gender, password},
         { withCredentials: true,
           headers: {
@@ -46,7 +46,7 @@ import { toast } from "react-toastify";
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/users/login", 
+      const response = await axios.post("https://edumentor-backend-s85o.onrender.com/api/v1/users/login", 
         { email, password, confirmPassword, role:"User"},
         { withCredentials: true,
           headers: {
