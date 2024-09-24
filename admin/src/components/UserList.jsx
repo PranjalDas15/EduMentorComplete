@@ -14,7 +14,7 @@ const UserList = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/users/users",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/users",
           { withCredentials: true }
         );
         setIsAuthenticated(true);
