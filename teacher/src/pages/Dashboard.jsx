@@ -13,7 +13,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/appointment/getall",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/appointment/getall",
           {
             withCredentials: true,
           }
@@ -33,7 +33,7 @@ const Dashboard = () => {
   const handleStatusChange = async (appointmentId, newStatus) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/v1/appointment/update/${appointmentId}`,
+        `https://edumentor-backend-s85o.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status: newStatus },
         { withCredentials: true }
       );
