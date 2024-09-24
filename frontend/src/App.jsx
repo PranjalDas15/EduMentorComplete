@@ -33,7 +33,7 @@ function App() {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/users/user/logout",
+        "https://edumentor-backend-s85o.onrender.com/api/v1/users/user/logout",
         { withCredentials: true }
       );
       toast.success(response.data.message);
@@ -48,7 +48,7 @@ function App() {
     if (isAuthenticated) {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/appointment/getme",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/appointment/getme",
           { withCredentials: true }
         );
         console.log("Response Data:", response.data);
@@ -71,7 +71,7 @@ function App() {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/users/user/me",
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/user/me",
           { withCredentials: true }
         );
         setIsAuthenticated(true);
@@ -88,7 +88,7 @@ function App() {
     const fetchTeachers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/users/teachers"
+          "https://edumentor-backend-s85o.onrender.com/api/v1/users/teachers"
         );
         setTeachers(response.data.teachers);
       } catch (error) {
